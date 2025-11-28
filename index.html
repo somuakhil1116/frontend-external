@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Projects Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Student Project Gallery</h1>
+
+<div class="gallery">
+    <img src="images/project1.jpg" alt="Project 1" onclick="openModal(this)">
+    <img src="images/project2.jpg" alt="Project 2" onclick="openModal(this)">
+    <img src="images/project3.jpg" alt="Project 3" onclick="openModal(this)">
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img id="modalImg">
+</div>
+
+<script>
+function openModal(img) {
+    document.getElementById("modalImg").src = img.src;
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
